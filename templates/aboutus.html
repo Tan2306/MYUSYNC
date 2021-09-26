@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+
+    <!-- Name on website tab -->
+    <title>MyuSync</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo.png" />
+
+    <!-- Linking JS -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- Linking CSS -->
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/styles.css') }}">
+
+    <!-- Font Awesome-->
+
+    <link rel="fontawesome" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" integrity="sha512-u7ppO4TLg4v6EY8yQ6T6d66inT0daGyTodAi6ycbw9+/AU8KMLAF7Z7YGKPMRA96v7t+c7O1s6YCTGkok6p9ZA==" crossorigin="anonymous" />
+
+    <!--Google Fonts -->
+      <!-- Navbar font - Roboto Slab, Jumbotron - Exo, Footer - PT Serif -->
+      <link href="https://fonts.googleapis.com/css2?family=Exo:wght@900&family=PT+Serif:ital,wght@1,700&family=Roboto+Slab&display=swap" rel="stylesheet">
+      <!-- Content Head -->
+      <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
+      <!-- Content Para and Content-Intro -->
+      <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+
+
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+      <div class="logo">
+        <img src="/Users/sampurna/Downloads/z/assets/images/WhatsApp Image 2020-12-13 at 12.47.46.jpeg" width="50px" alt="Logo">
+      </div>
+      <a class="navbar-brand nav-head" >MyuSync</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown" >
+        <ul class="navbar-nav ">
+          <li class="nav-item active">
+            <a class="nav-link" href="{{url_for('home')}}">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{{url_for('aboutus')}}">About Us</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{{url_for('ourteam')}}">Our Team</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{{url_for('login')}}">Login </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{{url_for('feedback')}}">Feedback</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- ------------------------------>
+
+    <!-- Jumbotron/Head -->
+    <section class="about-jumbotron" >
+      <div class="container-fluid">
+        <h1 class="about-jumb-head">ABOUT US</h1>
+      </div>
+    </section>
+    <!-- ------------------------------>
+
+    <!-- Content -->
+    <section class="about-content">
+      <div class="container-fluid">
+        <h3 class="content-head"> MyuSync - Finding your Musical Connection </h3><br>
+        <p class="content-intro" class="col-sm-4">
+          If you're <br>(A) A musician willing to collaborate with other musicians or wanting to get hired, or <br>(B) A non-musician up for hiring, or <br>(C) A music lover, <br>you're at the right place! </p>
+        <section class="content-sub">
+
+          <h4 class="content-sub-head"> What is MyuSync? </h4>
+        </section>
+
+        <!-- <p class="center"> <img class="col-sm-8 content-1" src="assets/images/content.jpeg"> </p> -->
+
+        <p class="content-para col-sm-10"> MyuSync is a one-stop platform to connect musicians with non-musicians and other musicians for collaboration. You may register as a Musician or a Non-Musician to access the amazing features from the comfort of your home! </p>
+        <h4 class="content-sub-head"> Why MyuSync? </h4>
+        <p class="content-para col-sm-10">MyuSync solves all your problems of searching for people who might be interested in what you do. As a musician, you will be able to get hired by non-musicians and search for and collaborate with other musicians. As a non-musician, you will be able to search for and hire musicians. With our platform, you will have direct contact with genuinely interested people and there will be no involvement of any other person (so no middlemen, and no paying others to find someone for you!).
+
+
+
+
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+      <p> Created with <i class="fa fa-heart"></i> by MyuSync</p>
+    </footer>
+    <!-- ------------------------------>
+
+  </body>
+</html>

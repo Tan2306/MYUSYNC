@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+
+    <!-- Name on website tab -->
+    <title>MyuSync</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo.png" />
+
+    <!-- Linking JS -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- Linking CSS -->
+      <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/non-profile.css') }}">
+
+    <!-- Font Awesome-->
+
+    <link rel="fontawesome" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" integrity="sha512-u7ppO4TLg4v6EY8yQ6T6d66inT0daGyTodAi6ycbw9+/AU8KMLAF7Z7YGKPMRA96v7t+c7O1s6YCTGkok6p9ZA==" crossorigin="anonymous" />
+
+    <!--Google Fonts -->
+    <!-- Navbar font - Roboto Slab, Jumbotron - Exo, Footer -  -->
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@900&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@900&family=PT+Serif:ital,wght@1,700&family=Roboto+Slab&display=swap" rel="stylesheet">
+<style>
+.job-tab,td {
+    border-style: solid;
+    border-color: black;
+    border-width:1px;
+  }
+  .head-tab {
+    background-color: #EEF6FC;
+  }
+  .job-head {
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      padding-left: 1em;
+      padding-right: 2em;
+    }
+  .job-info {
+      padding-left: 1em;
+      width: 25em;
+      color: #353945;
+    }
+
+</style>
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+      <div class="logo">
+        <img src="static\images\myulogo.47.46.jpeg" width="50px" alt="Logo">
+      </div>
+      <a class="navbar-brand nav-head" >MyuSync</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown" >
+        <ul class="navbar-nav ">
+          <li class="nav-item active">
+            <a class="nav-link" href="{{url_for('home')}}">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{{url_for('aboutus')}}">About Us</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{{url_for('ourteam')}}">Our Team</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{{url_for('login')}}">Login </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{{url_for('feedback')}}">Feedback</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- ------------>
+
+    <body class="profile-page sidebar-collapse" style="background-color:black;">
+      <div>
+      <div class="page-header header-filter"  style="background-image:url('https://bestwallpapers.in/wp-content/uploads/2018/04/equaliser-music-bar-blue-4k-wallpaper-2560x1080.jpg');"></div>
+      <div class="main main-raised">
+        <div class="profile-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 ml-auto mr-auto">
+                <div class="profile">
+                  <div class="avatar">
+                    <img src="\static\images\searchlogo.jpg" alt="Circle Image" class="img-raised rounded-circle img-fluid">
+                  </div>
+                  <div class="name">
+                    <h3 class="title">Search for Musician</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            <div class="description">
+                   <form method="POST">
+                     <div class="pl-lg-4">
+                       <div class="row">
+                         <div class="col-lg-6">
+                           <h6 class="choice-head"> Choose language: </h6>
+                         </div>
+                         <div class="col-lg-6">
+                           <div class="form-group focused">
+                             <div class="top-space">
+                               {%if paraofsearch!=""%}
+                                  {%if paraofsearch[0]=='1'%}
+                                    <input type="checkbox" name="LangEng" id="edit-det1" value="1" checked>  English<br>
+                                  {%endif%}
+                                  {%if paraofsearch[0]=='0'%}
+                                    <input type="checkbox" name="LangEng" id="edit-det1" value="1">  English<br>
+                                  {%endif%}
+
+                                  {%if paraofsearch[1]=='1'%}
+                                    <input type="checkbox" name="LangHindi" id="edit-det1" value="1" checked>  Hindi<br>
+                                  {%endif%}
+                                  {%if paraofsearch[1]=='0'%}
+                                    <input type="checkbox" name="LangHindi" id="edit-det1" value="1">  Hindi<br>
+                                  {%endif%}
+
+                                  {%if paraofsearch[2]=='1'%}
+                                    <input type="checkbox" name="LangOther" id="edit-det1" value="1" checked>  Other<br>
+                                  {%endif%}
+                                  {%if paraofsearch[2]=='0'%}
+                                    <input type="checkbox" name="LangOther" id="edit-det1" value="1">  Other<br>
+                                  {%endif%}
+                               {%endif%}
+
+                               {%if paraofsearch==""%}
+                                   <input type="checkbox" name="LangEng" id="edit-det1" value="1">  English<br>
+                                   <input type="checkbox" name="LangHindi" id="edit-det1" value="1">  Hindi<br>
+                                   <input type="checkbox" name="LangOther" id="edit-det1" value="1">  Other<br>
+                               {%endif%}
+                             </div>
+                           </div>
+                         </div>
+                       </div>
+
+                       <div class="row">
+                         <div class="col-lg-6">
+                           <h6 class="choice-head"> Choose type of Musician: </h6>
+                         </div>
+                         <div class="col-lg-6">
+                           <div class="form-group focused">
+                             <div class="top-space">
+                               {%if paraofsearch!=""%}
+                                  {%if paraofsearch[3]=='1'%}
+                                    <input id="edit-det1" type="checkbox" name="vocalist"  value="1" checked>  Vocalist<br>
+                                  {%endif%}
+                                  {%if paraofsearch[3]=='0'%}
+                                    <input id="edit-det1" type="checkbox" name="vocalist"  value="1" >  Vocalist<br>
+                                  {%endif%}
+
+                                  {%if paraofsearch[4]=='1'%}
+                                    <input type="checkbox" name="instrumentalist" id="edit-det1" value="1" checked>  Instrumentalist<br>
+                                  {%endif%}
+                                  {%if paraofsearch[4]=='0'%}
+                                    <input type="checkbox" name="instrumentalist" id="edit-det1" value="1">  Instrumentalist<br>
+                                  {%endif%}
+
+                                  {%if paraofsearch[5]=='1'%}
+                                    <input type="checkbox" name="composer" id="edit-det1" value="1" checked>  Composer<br>
+                                  {%endif%}
+                                  {%if paraofsearch[5]=='0'%}
+                                    <input type="checkbox" name="composer" id="edit-det1" value="1">  Composer<br>
+                                  {%endif%}
+
+                                  {%if paraofsearch[6]=='1'%}
+                                    <input type="checkbox" name="Typeother" id="edit-det1" value="1" checked>  Other<br><br>
+                                  {%endif%}
+                                  {%if paraofsearch[6]=='0'%}
+                                    <input type="checkbox" name="Typeother" id="edit-det1" value="1">  Other<br><br>
+                                  {%endif%}
+                               {%endif%}
+
+                               {%if paraofsearch=="" %}
+                                    <input id="edit-det1" type="checkbox" name="vocalist"  value="1" >  Vocalist<br>
+                                   <input type="checkbox" name="instrumentalist" id="edit-det1" value="1">  Instrumentalist<br>
+                                    <input type="checkbox" name="composer" id="edit-det1" value="1">  Composer<br>
+                                    <input type="checkbox" name="Typeother" id="edit-det1" value="1">  Other<br><br>
+                               {%endif%}
+                             </div>
+                           </div>
+                         </div>
+                       </div>
+
+                       <div class="row">
+                         <div class="col-lg-6">
+                           <h6 class="choice-head"> Choose language: </h6>
+                         </div>
+                         <div class="col-lg-6">
+                           <div class="form-group focused">
+                             <div class="top-space">
+                               {%if paraofsearch!="" %}
+                                  {% if paraofsearch[7]=='1'%}
+                                    <input id="edit-det1" type="checkbox" name="pop"  value="1" checked>  Pop<br>
+                                  {%endif%}
+                                  {% if paraofsearch[7]=='0'%}
+                                    <input id="edit-det1" type="checkbox" name="pop"  value="1">  Pop<br>
+                                  {%endif%}
+
+                                  {%if paraofsearch[8]=='1'%}
+                                    <input type="checkbox" name="rock" id="edit-det1" value="1" checked> Rock<br>
+                                  {%endif%}
+                                  {%if paraofsearch[8]=='0'%}
+                                    <input type="checkbox" name="rock" id="edit-det1" value="1" > Rock<br>
+                                  {%endif%}
+
+                                  {%if paraofsearch[9]=='1'%}
+                                    <input type="checkbox" name="hiphop" id="edit-det1" value="1" checked> Hip Hop<br>
+                                  {%endif%}
+                                  {%if paraofsearch[9]=='0'%}
+                                    <input type="checkbox" name="hiphop" id="edit-det1" value="1"> Hip Hop<br>
+                                  {%endif%}
+
+                                  {%if paraofsearch[10]=='1'%}
+                                    <input type="checkbox" name="jazz" id="edit-det1" value="1" checked> Jazz<br>
+                                  {%endif%}
+                                  {%if paraofsearch[10]=='0'%}
+                                    <input type="checkbox" name="jazz" id="edit-det1" value="1"> Jazz<br>
+                                  {%endif%}
+
+                                  {%if paraofsearch[11]=='1'%}
+                                    <input type="checkbox" name="Genreother" id="edit-det1" value="1" checked> Other<br>
+                                  {%endif%}
+                                  {%if paraofsearch[11]=='0'%}
+                                    <input type="checkbox" name="Genreother" id="edit-det1" value="1"> Other<br>
+                                  {%endif%}
+                               {%endif%}
+                               {%if paraofsearch=="" %}
+                                     <input id="edit-det1" type="checkbox" name="pop"  value="1">  Pop<br>
+                                      <input type="checkbox" name="rock" id="edit-det1" value="1" > Rock<br>
+                                      <input type="checkbox" name="hiphop" id="edit-det1" value="1"> Hip Hop<br>
+                                       <input type="checkbox" name="jazz" id="edit-det1" value="1"> Jazz<br>
+                                       <input type="checkbox" name="Genreother" id="edit-det1" value="1"> Other<br>
+                               {%endif%}
+                             </div>
+                           </div>
+                         </div>
+                       </div>
+                       <div class="row">
+                         <div class="col-lg-12">
+                           <center><input id="mus-search-button" type="submit" class="form-submit" name="submit"><br><br><br>
+                        </div>
+                     </div>
+                   </form>
+                 </div>
+              </div>
+                 <!-- temp=[match-0,fname-1,fusername-2,fdob-3,fgender-4,femail-5,fmobile-6,fworkex-7,fworklinks-8,typel-9,langl-10,genrel-11] -->
+                 <section class="job-main" class="container-fluid" style=" width : 70%; margin:0 auto; height:auto;">
+                 <div class="col-12" class="job-div" >
+                   {%for info in toshow%}
+                     <table class="job-tab" align="center" border="1" >
+                       <tr>
+                         <td class="head-tab">
+                           <h6 class="job-head"> Match Percentage: </h6>
+                         </td>
+                         <td>
+                           <h6 class="job-info">{{info[0]}}%<h6>
+                         </td>
+                       </tr>
+                       <tr>
+                         <td class="head-tab">
+                           <h6 class="job-head"> Name: </h6>
+                         </td>
+                         <td>
+                           <h6 class="job-info">{{info[1]}}<h6>
+                         </td>
+                       </tr>
+                       <tr>
+                         <td class="head-tab">
+                           <h6 class="job-head"> Username: </h6>
+                         </td>
+                         <td>
+                           <h6 class="job-info">{{info[2]}}<h6>
+                         </td>
+                       </tr>
+                       <tr>
+                         <td class="head-tab">
+                           <h6 class="job-head"> Work Experience: </h6>
+                         </td>
+                         <td>
+                           <h6 class="job-info">{{info[7]}}<h6>
+                         </td>
+                       </tr>
+                       <tr>
+                         <td class="head-tab">
+                           <h6 class="job-head"> Work Links: </h6>
+                         </td>
+                         <td>
+                           <h6 class="job-info">{{info[8]}}<h6>
+                         </td>
+                       </tr>
+  
+
+                         <td class="head-tab">
+                           <h6 class="job-head"> Language: </h6>
+                         </td>
+                         <td >
+                           {%for j in info[10]%}
+                              <h6 class="job-info">{{j}}<h6>
+                           {%endfor%}
+                         </td>
+                       </tr>
+                       <tr>
+                         <td class="head-tab">
+                           <h6 class="job-head"> Type: </h6>
+                         </td>
+                         <td>
+                           {%for j in info[9]%}
+                              <h6 class="job-info">{{j}}<h6>
+                           {%endfor%}
+                         </td>
+                       </tr>
+                       <tr>
+                         <td class="head-tab">
+                           <h6 class="job-head"> Genre: </h6>
+                         </td>
+                         <td >
+                           {%for j in info[11]%}
+                              <h6 class="job-info">{{j}}<h6>
+                           {%endfor%}
+                         </td>
+                       </tr>
+                       <br><br>
+                     </div>
+                   </table>
+                   {%endfor%}
+                 </section>
+                 </div>
+                 </div>
+                 </div>
+                 <!-- ------------------------------>
+                 <!-- Footer -->
+                 <footer>
+                   <p> Created with <i class="fa fa-heart"></i> by MyuSync</p>
+                 </footer>
+                 <!-- ------------------------------>
+           </body>
+        </html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+
+    <!-- Name on website tab -->
+    <title>MyuSync</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo.png" />
+
+    <!-- Linking JS -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- Linking CSS -->
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/styles.css') }}">
+
+    <!-- Font Awesome-->
+
+    <link rel="fontawesome" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" integrity="sha512-u7ppO4TLg4v6EY8yQ6T6d66inT0daGyTodAi6ycbw9+/AU8KMLAF7Z7YGKPMRA96v7t+c7O1s6YCTGkok6p9ZA==" crossorigin="anonymous" />
+
+    <!--Google Fonts -->
+    <!-- Navbar font - Roboto Slab, Jumbotron - Exo, Footer -  -->
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@900&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@900&family=PT+Serif:ital,wght@1,700&family=Roboto+Slab&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+
+  <!-- side bar -->
+        <section class="profile-nav-bar">
+          <ul>
+            <li>
+            <span class="logo" >
+              <img src="/Users/sampurna/Downloads/z/assets/images/WhatsApp Image 2020-12-13 at 12.47.46.jpeg" width="50px" alt="Logo">
+                <span class="logo-name">MyuSync </span></span></li>
+                <li><a class="active" href="{{url_for('musicianprofile')}}">Profile</a></li>
+                <li><a href="{{url_for('searchm')}}">Search For Musician</a></li>
+                <li><a href="{{url_for('lookforajob')}}">Look for a Job</a></li>
+                <li><a href="{{url_for('editm')}}">Edit Profile</a></li>
+                <li><a href="{{url_for('logout')}}">Log Out</a></li>
+          </ul>
+        </section>
+    <!-- ____ -->
+<!-- Heading -->
+<section class="M-edit-profile-jumbotron" >
+  <div class="container-fluid">
+    <h1 class="M-edit-profile-jumb-head">Edit Profile</h1>
+  </div>
+</section>
+<!-- -------->
+<!-- Edit profile form -->
+<section class="edit-profile-main" class="container-fluid" style="border :3px solid #0A0C1F; width : 50%;">
+  <div class="col-12" class="edit-div">
+    <form method="post" align="left">
+      <table class="m-edit-tab" align="center">
+          <br>
+        <h5 style="text-align:center; font-style:times;">EDIT</h5>
+        <tr>
+          <td>
+            <h6 class="edit-head"> Date of Birth: </h6><br>
+          </td>
+          <td>
+            <input type="date" id="edit-det" name="dob" placeholder="" size="30"><br>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h6 class="edit-head"> Gender: </h6><br>
+          </td>
+          <td>
+            <select id="edit-det" name="gender" id="gender">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="NoneBinary">Non-Binary</option>
+            </select><br>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h6 class="edit-head"> Email Address: </h6><br>
+          </td>
+          <td>
+            <input type="email" id="edit-det" name="email" placeholder={{fname}} size="30"><br>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h6 class="edit-head"> Mobile Number: </h6><br>
+          </td>
+          <td>
+            <input type="text" id="edit-det" name="mobile" placeholder="99xxxxxxxx" size="30"><br>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h6 class="edit-head"> Work Experience: </h6><br>
+          </td>
+          <td>
+            <input type="text" id="edit-det" name="workex" placeholder="I have worked at..." size="30"><br>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h6 class="edit-head"> Work Links: </h6><br>
+          </td>
+          <td>
+            <input type="url" id="edit-det" name="worklinks" placeholder="Youtube, Spotify, Soundcloud link..." size="30"><br>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <br>
+            <br>
+            <h6>PARAMETERS:</h6>
+            <br>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h6 class="edit-head"> Language: </h6><br>
+          </td>
+          <td>
+            <div class="top-space">
+              <input type="checkbox" name="LangEng" id="edit-det1" value="1">  English<br>
+              <input type="checkbox" name="LangHindi" id="edit-det1" value="1">  Hindi<br>
+              <input type="checkbox" name="LangOther" id="edit-det1" value="1">  Other<br>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h6 class="signup-head"> Type: </h6><br>
+          </td>
+          <td>
+            <div class="top-space">
+              <input id="edit-det1" type="checkbox" name="vocalist"  value="1">  Vocalist<br>
+              <input type="checkbox" name="instrumentalist" id="edit-det1" value="1">  Instrumentalist<br>
+              <input type="checkbox" name="composer" id="edit-det1" value="1">  Composer<br>
+              <input type="checkbox" name="Genreother" id="edit-det1" value="1">  Other<br>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h6 class="edit-head"> Genre: </h6><br>
+          </td>
+          <td>
+            <div class="top-space">
+              <input id="edit-det1" type="checkbox" name="LangEng"  value="1">  Pop<br>
+              <input type="checkbox" name="LangHindi" id="edit-det1" value="1"> Rock<br>
+              <input type="checkbox" name="LangOther" id="edit-det1" value="1"> Hip Hop<br>
+              <input type="checkbox" name="LangOther" id="edit-det1" value="1"> Jazz<br>
+              <input type="checkbox" name="LangOther" id="edit-det1" value="1"> Other<br>
+            </div>
+          </td>
+        </tr>
+        </div>
+      </table>
+      <br>
+        <center><input type="submit" class="form-submit" name="submit"><br><br><br>
+      <br>
+      <br>
+    </form>
+  </section>
+<!-- --------------->
+      </body>
+    </html>
