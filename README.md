@@ -6,10 +6,16 @@ The purpose of this Software Requirement Specification (SRS) is to present a det
 To make this SRS document more effective and readable the following conventions are used:
 
 •	Font style - Times New Roman 
+
 •	For main headings the font size is 18 and properly bolded
+
 •	For sub-headings the font size is 14 and properly underlined
+
 •	For the normal text the font size is 12.
+
 •	All the sections and subsections are properly numbered using X.X.X format where X are numbers.
+
+
 3.	Intended Audience and Reading Suggestions
 This document is intended to be read by the people who have an active role in making this website, as well as the users.
 The developers may use the various diagrams and functional requirements (section 3) to understand the functionalities of the website as well as the flow. Project managers may use this to recognise and make a timeline with milestones so as to ensure that no requirement is missed out on, which can be verified by testers by referring to this document. It can also be used by anyone who wishes to understand how the website works, such as the end-users, and offer clarity.
